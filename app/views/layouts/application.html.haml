@@ -9,12 +9,17 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body{:class => params[:controller]}
+    #header
+      .fleft
+        #logo= link_to "Awesome Developer Tools", root_path
+      .fleft
+        = link_to "Tools", tools_path
+      .fright
+        = render 'shared/navigation'
+      .clear
     #container.container
-      %div
-        %ul.hmenu
-          = render 'shared/navigation'
-        - flash.each do |name, msg|
-          = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_\#{name}" if msg.is_a?(String)
       #main{:role => "main"}
         = yield
       %footer

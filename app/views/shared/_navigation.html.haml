@@ -1,8 +1,6 @@
 - if user_signed_in?
-  %li
-    Logged in as #{current_user.name}
-  %li
-    = link_to('Logout', signout_path)
+  Logged in as 
+  = current_user.name
+  = link_to('Logout', signout_path)
 - else
-  %li
-    = link_to('Login', signin_path)
+  = link_to('Login', signin_path)
