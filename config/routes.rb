@@ -3,7 +3,7 @@ AwesomeDeveloperTools::Application.routes.draw do
 
   #get \"users\/show\"
 
-  root :to => "home#index"
+  root :to => "tools#index"
 
   resources :users, :only => [ :show, :edit, :update ]
 
