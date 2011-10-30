@@ -29,30 +29,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-if HOST_OS =~ /linux/i
-  gem 'therubyracer', '>= 0.9.8'
-end
-
-
-
 group :development do
   gem "haml-rails", ">= 0.3.4"
   gem "rails-footnotes", ">= 3.7"
   
   # Guard
   gem "guard", ">= 0.6.2"
-  case HOST_OS
-    when /darwin/i
-      gem 'rb-fsevent'
-      gem 'growl'
-    when /linux/i
-      gem 'libnotify'
-      gem 'rb-inotify'
-    when /mswin|windows/i
-      gem 'rb-fchange'
-      gem 'win32console'
-      gem 'rb-notifu'
-  end
   gem "guard-bundler", ">= 0.1.3"
   gem "guard-rails", ">= 0.0.3"
   gem "guard-livereload", ">= 0.3.0"
