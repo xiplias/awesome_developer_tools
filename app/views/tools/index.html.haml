@@ -1,22 +1,17 @@
-%h1 Listing tools
+%h2 Newest tools
 %table
-  %tr
-    %th Name
-    %th Description
-    %th Website
-    %th
-    %th
-    %th
-
-  - @tools.each do |tool|
+  %thead
     %tr
-      %td= tool.name
-      %td= tool.description
-      %td= tool.website
-      %td= link_to 'Show', tool
-      %td= link_to 'Edit', edit_tool_path(tool)
-      %td= link_to 'Destroy', tool, :confirm => 'Are you sure?', :method => :delete
+      %th Tool
+      %th Website
+  %tbody
+    - @tools.each do |tool|
+      %tr
+        %td
+          = link_to tool.name, tool_path(tool)
+          = tool.description
+        %td= link_to tool.website, tool.website, :target => "_blank"
 
 %br
 
-= link_to 'New Tool', new_tool_path, :class => "medium radius button"
+= link_to 'Add Tool', new_tool_path, :class => "medium radius button"
