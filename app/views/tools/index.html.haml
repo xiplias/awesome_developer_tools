@@ -1,0 +1,22 @@
+%h1 Listing tools
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Website
+    %th
+    %th
+    %th
+
+  - @tools.each do |tool|
+    %tr
+      %td= tool.name
+      %td= tool.description
+      %td= tool.website
+      %td= link_to 'Show', tool
+      %td= link_to 'Edit', edit_tool_path(tool)
+      %td= link_to 'Destroy', tool, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Tool', new_tool_path, :class => "medium radius button"

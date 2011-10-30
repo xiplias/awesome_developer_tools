@@ -1,4 +1,6 @@
 AwesomeDeveloperTools::Application.routes.draw do
+  resources :tools
+
   #get \"users\/show\"
 
   root :to => "home#index"
