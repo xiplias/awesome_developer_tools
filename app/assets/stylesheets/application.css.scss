@@ -6,14 +6,37 @@
  *= require foundation
  *= require_tree . 
 */
-header nav ul {
-  list-style: none;
-  margin: 0 0 2em;
-  padding: 0;
+
+#header {
+  padding: 10px 20px;
+  background: #000;
+  border-bottom: 4px #00a5ff solid;
+  margin-bottom: 20px;
+  color: #7f7f7f;
+  
+  #logo {
+    color: #fff;
+    font-size: 16px;
+    padding-right: 20px;
+    
+    a {
+      color: #fff;
+    }
+  }
 }
-header nav ul li {
-  display: inline;
+
+.fleft {
+  float: left;
 }
+
+.fright {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
