@@ -2,4 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  unauthorized:
+    manage:
+      all: "Not authorized to %{action} %{subject}."
+      tool: "You need to be logged in to access this page"
+    delete:
+      all: "Not allowed to delete this %{subject}."
+    new:
+      tool: "You need to be logged in to add new tools"
