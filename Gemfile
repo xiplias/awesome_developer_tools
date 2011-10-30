@@ -6,6 +6,10 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'json'
 
+# Production
+gem "heroku"
+gem "thin"
+
 # Database
 gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.2.3"
