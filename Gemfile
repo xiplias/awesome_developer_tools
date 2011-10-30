@@ -12,6 +12,7 @@ gem "mongoid", ">= 2.2.3"
 
 # Auth
 gem "omniauth", ">= 0.3.2"
+gem "cancan"
 
 # Assets
 gem "haml", ">= 3.1.2"
